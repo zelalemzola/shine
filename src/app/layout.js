@@ -1,8 +1,10 @@
-import { Inter } from "next/font/google";
+import { Inter,Domine } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Domine({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col justify-between`}>
+      <Navbar/>
+     <div className="md:pt-16">{children}</div> 
+      <Footer/>
+      </body>
     </html>
     </ClerkProvider>
   );
