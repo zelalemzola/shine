@@ -22,12 +22,12 @@ const Navbar = () => {
     const [activeIndex,setActiveIndex]=useState();
   return (
     <>
-    <div className='md:flex md:fixed md:w-screen flex-row hidden items-center gap-4 bg-yellow-500 text-white p-5 px-8 justify-between'>
+    <div className='md:flex z-50 md:fixed md:w-screen flex-row hidden items-center gap-4 bg-yellow-500 text-white p-5 px-8 justify-between'>
        <div><Image src="/SFlogo.png" width={200} height={200} alt="logo" className="mt-[-80px] mb-[-90px] mb-0"/></div>
        <div className="flex items-center gap-4 space-x-4">
         <Link onClick={()=>setActiveIndex(1)} className={`hover:text-black ${activeIndex===1 && 'text-black font-bold'}`} href="/">Home</Link>
         <Link onClick={()=>setActiveIndex(2)} className={`hover:text-black ${activeIndex===2 && 'text-black font-bold'}`} href="/">Contact</Link>
-        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-black ${activeIndex===3 && 'text-black font-bold'}`} href="/">Dashboard</Link>
+        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-black ${activeIndex===3 && 'text-black font-bold'}`} href="/dashboard">Dashboard</Link>
         <Link href="/sign-in"><Button >Sign In</Button></Link>
        </div>
     </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
     <div className="flex flex-col items-center gap-4 space-y-6 font-bold">
         <Link onClick={()=>setActiveIndex(1)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===1 && 'text-white bg-black font-bold'}`} href="/">Home</Link>
         <Link onClick={()=>setActiveIndex(2)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===2 && 'text-white bg-black font-bold'}`} href="/">Contact</Link>
-        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===3 && 'text-white bg-black font-bold'}`} href="/">Dashboard</Link>
+        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===3 && 'text-white bg-black font-bold'}`} href="/dashboard">Dashboard</Link>
         <Link href="/sign-in"><Button >Sign In</Button></Link>
        </div>
     <DrawerFooter>

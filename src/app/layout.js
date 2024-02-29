@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={`${inter.className} flex flex-col justify-between`}>
+      <body className={`${inter.className} h-full flex flex-col justify-between`}>
       <Navbar/>
      <div className="md:pt-16">{children}</div> 
       <Footer/>
