@@ -55,20 +55,21 @@ const BarChart = () => {
     ]
   return (
     <ResponsiveContainer key="responsive-container" width={'100%'} height={350}>
-     <BarGraph data={data}>
+     <BarGraph data={data} >
          <XAxis 
             dataKey={'name'}
             tickLine={false}
             axisLine={false}
             stroke='#888888'
-            fontSize={12}
+            fontSize={15}
+          
          />
          <YAxis
-            
+       
             tickLine={false}
             axisLine={false}
             stroke='#888888'
-            fontSize={12}
+            fontSize={15}
             tickFormatter={(value)=>`$${value}`}
          />
          <Bar dataKey={"total"} radius={[4,4,0,0]}/>

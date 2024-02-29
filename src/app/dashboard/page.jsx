@@ -169,13 +169,13 @@ const calculateTotalReach = (ads) => {
     <div className='h-full  py-7 px-4'>
      <Card cardData={cardData}/>
      <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2 mt-8">
-        <div className="flex w-full flex-col gap-3 rounded-xl border p-5 shadow">
+        <div className="bg-yellow-500 text-white flex w-full flex-col gap-3 rounded-xl border p-5 shadow-lg">
         <div>
-          <p className="p-4 font-semibold">Overview</p>
+          <p className="p-4 text-xl font-semibold">Overview</p>
           <BarChart/>
         </div>
         </div>
-        <div  className="flex justify-between w-full flex-col gap-4 rounded-xl border p-5 shadow">
+        <div  className=" bg-yellow-500 text-white flex justify-between w-full flex-col gap-4 rounded-xl border p-5 shadow-lg">
           <div className='flex  justify-between items-center'>
           <p>Recent ADS</p>
           <Maximize2 size="18px" className='cursor-pointer font-bold' onClick={()=>{route.push("/detailanalytics")}}/>

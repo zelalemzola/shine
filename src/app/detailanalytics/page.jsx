@@ -198,7 +198,7 @@ const Users = () => {
           }
         ]
   return (
-    <div className='flex flex-col gap-5 w-full h-full py-16 px-7 bg-black text-white'>
+    <div className='flex flex-col gap-5 w-full h-full py-16 px-7 bg-white text-black'>
        <h1 className='text-2xl font-semibold'>List Of All ADS</h1>
       <DataTable columns={columns} data={ADS}/>
     </div>

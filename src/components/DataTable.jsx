@@ -35,7 +35,7 @@ export default function DataTable({
     <div>
 
     <div className="rounded-md border">
-      <Table key="table" className="rounded-md border text-white">
+      <Table key="table" className="rounded-md border text-white bg-yellow-500">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
@@ -60,7 +60,7 @@ export default function DataTable({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className="hover:bg-yellow-500 hover:text-black hover:font-semibold"
+                className="hover:bg-black hover:text-white hover:font-bold"
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id} >

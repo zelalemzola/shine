@@ -16,10 +16,13 @@ import {
 import { Button,buttonVariants } from "@/components/ui/button"
 
 import { AlignJustify } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const user= useUser();
     const [activeIndex,setActiveIndex]=useState();
+    const path= usePathname();
+    
   return (
     <>
     <div className='md:flex z-50 md:fixed md:w-screen flex-row hidden items-center gap-4 bg-yellow-500 text-white p-5 px-8 justify-between'>
@@ -28,7 +31,7 @@ const Navbar = () => {
         <Link onClick={()=>setActiveIndex(1)} className={`hover:text-black ${activeIndex===1 && 'text-black font-bold'}`} href="/">Home</Link>
         <Link onClick={()=>setActiveIndex(2)} className={`hover:text-black ${activeIndex===2 && 'text-black font-bold'}`} href="/">Contact</Link>
         <Link onClick={()=>setActiveIndex(3)} className={`hover:text-black ${activeIndex===3 && 'text-black font-bold'}`} href="/dashboard">Dashboard</Link>
-        <Link href="/sign-in"><Button >Sign In</Button></Link>
+       {path==="/"?(<Link href="/sign-in"><Button >Sign In</Button></Link>):(user?<UserButton/>:<Link href="/sign-in"><Button >Sign In</Button></Link>)}
        </div>
     </div>
     
