@@ -177,9 +177,11 @@ const calculateTotalReach = (ads) => {
         </div>
         <div  className="flex justify-between w-full flex-col gap-4 rounded-xl border p-5 shadow">
           <div className='flex  justify-between items-center'>
-          <p>Recent Sales</p>
+          <p>Recent ADS</p>
           <Maximize2 size="18px" className='cursor-pointer font-bold' onClick={()=>{route.push("/detailanalytics")}}/>
+          <p>Reach</p>
         </div>
+         
         {ADS.map((d,i)=>(<SalesCard key={i}  name={d.name} reach={d.reach}/>))}
       </div>
       </section>
