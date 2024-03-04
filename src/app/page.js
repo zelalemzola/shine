@@ -16,13 +16,13 @@ export default function Home() {
   
   return (
     <>
-     <div className="bg-yellow-400 h-full p-16">
+     <div className="bg-white h-full p-16">
         {/* landing page */}
-        <h1 className="text-center text-black font-bold text-4xl">Shine A <span className="text-white">Light</span> On Your Brand With Us !</h1>
-        <div className="flex flex-col-reverse md:flex-row items-center gap-4 mt-10">
-          <div className="flex-1  flex flex-col items-start text-justify p-5">
+        <h1 className="text-center text-black font-bold text-4xl">Shine A <span className="text-yellow-400">Light</span> On Your Brand With Us !</h1>
+        <div className="flex flex-col-reverse md:flex-row items-center gap-4 mt-16">
+          <div className="flex-1  flex flex-col  justify-start p-5">
             
-        <p className="text-justify text-xl font-bold"><span className="text-3xl text-white font-bold">" With SHINE </span> Unleash the power of our bespoke social media magic to propel your brand to the forefront of the digital world. Elevate your online presence, captivate audiences, and ignite conversations that drive unprecedented growth.<span className="text-3xl text-white font-bold">"</span> </p> 
+        <p className="text-justify  text-xl font-bold"><span className="text-3xl text-yellow-400 font-bold">" With SHINE </span> Unleash the power of our bespoke social media magic to propel your brand to the forefront of the digital world. Elevate your online presence, captivate audiences, and ignite conversations that drive unprecedented growth.<span className="text-3xl text-yellow-400 font-bold">"</span> </p> 
          <p className="mt-5 text-lg font-semibold mb-4"> New User Sign Up Now and Reach Millions </p>
           <Link href="/sign-in" className="rounded-lg text-center bg-black text-white py-3 px-5 w-1/3">Sign In</Link>
           </div>
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         </div>
         {/* services */}
-        <div className="bg-yellow-400 pt-28  p-16 ">
+        <div className="bg-white pt-28  p-16 ">
           <h1 className="text-4xl text-black font-bold text-center">Services We Provide</h1>
           <div className="mt-[80px] md:mt-[160px] mx-auto flex flex-col md:flex-row gap-9 justify-center items-center">
             <Card className={cn("w-[290px] h-[290] bg-black text-white")} >

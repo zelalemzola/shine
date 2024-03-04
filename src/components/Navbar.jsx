@@ -25,29 +25,29 @@ const Navbar = () => {
     
   return (
     <>
-    <div className='md:flex z-50 md:fixed md:w-screen flex-row hidden items-center gap-4 bg-yellow-500 text-white p-5 px-8 justify-between'>
+    <div className='md:flex z-50 md:fixed md:w-screen flex-row hidden items-center gap-4 bg-white text-black p-5 px-8 justify-between border-b shadow-lg'>
        <div><Image src="/SFlogo.png" width={200} height={200} alt="logo" className="mt-[-80px] mb-[-90px] mb-0"/></div>
        <div className="flex items-center gap-4 space-x-4">
-        <Link onClick={()=>setActiveIndex(1)} className={`hover:text-black ${activeIndex===1 && 'text-black font-bold'}`} href="/">Home</Link>
-        <Link onClick={()=>setActiveIndex(2)} className={`hover:text-black ${activeIndex===2 && 'text-black font-bold'}`} href="/">Contact</Link>
-        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-black ${activeIndex===3 && 'text-black font-bold'}`} href="/dashboard">Dashboard</Link>
+        <Link onClick={()=>setActiveIndex(1)} className={` ${activeIndex===1 && ' font-bold'}`} href="/">Home</Link>
+        <Link onClick={()=>setActiveIndex(2)} className={` ${activeIndex===2 && ' font-bold'}`} href="/">Contact</Link>
+        <Link onClick={()=>setActiveIndex(3)} className={` ${activeIndex===3 && ' font-bold'}`} href="/dashboard">Dashboard</Link>
        {path==="/"?(<Link href="/sign-in"><Button >Sign In</Button></Link>):(user?<UserButton/>:<Link href="/sign-in"><Button >Sign In</Button></Link>)}
        </div>
     </div>
     
-    <div className='md:hidden fixed w-full p-4 bg-yellow-500 flex items-center justify-between'>
+    <div className='md:hidden z-50 fixed w-full p-4 bg-white border-b shadow-lg flex items-center justify-between'>
     <div><Image src="/SFlogo.png" width={200} height={200} alt="logo" className="mt-[-80px] mb-[-90px] mb-0"/></div>
     <Drawer direction="left">
   <DrawerTrigger > <AlignJustify /></DrawerTrigger>
-  <DrawerContent className="w-1/2 md:hidden h-full bg-yellow-500">
+  <DrawerContent className="w-1/2 md:hidden h-full bg-white">
     <DrawerHeader>
       <DrawerTitle><Image src="/SFlogo.png" className='mt-[-90px] mx-auto' alt="logo" width={200} height={200}/></DrawerTitle>
       <DrawerDescription> <p className='text-black mt-[-50px] font-bold text-center'>Elevate Your Presence with SHINE</p></DrawerDescription>
     </DrawerHeader>
     <div className="flex flex-col items-center gap-4 space-y-6 font-bold">
-        <Link onClick={()=>setActiveIndex(1)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===1 && 'text-white bg-black font-bold'}`} href="/">Home</Link>
-        <Link onClick={()=>setActiveIndex(2)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===2 && 'text-white bg-black font-bold'}`} href="/">Contact</Link>
-        <Link onClick={()=>setActiveIndex(3)} className={`hover:text-white w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===3 && 'text-white bg-black font-bold'}`} href="/dashboard">Dashboard</Link>
+        <Link onClick={()=>setActiveIndex(1)} className={`w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===1 && 'text-white bg-black font-bold'}`} href="/">Home</Link>
+        <Link onClick={()=>setActiveIndex(2)} className={`w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===2 && 'text-white bg-black font-bold'}`} href="/">Contact</Link>
+        <Link onClick={()=>setActiveIndex(3)} className={`w-2/4 rounded-lg mx-auto text-center p-1 ${activeIndex===3 && 'text-white bg-black font-bold'}`} href="/dashboard">Dashboard</Link>
         <Link href="/sign-in"><Button >Sign In</Button></Link>
        </div>
     <DrawerFooter>

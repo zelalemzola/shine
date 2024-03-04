@@ -2,12 +2,12 @@ import React from 'react'
 import { MousePointerClick, HandHeart, DollarSign, Users } from "lucide-react";
 const Card = ({cardData}) => {
   return (
-    <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
+    <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4 shadow-lg">
         {cardData.map((card,index)=>(
-          <div  className='bg-yellow-500 text-white flex flex-col w-full gap-3 rounded-xl border p-6 shadow' key={index}>
+          <div  className='bg-white text-black flex flex-col w-full gap-3 rounded-xl border p-6 shadow' key={index}>
                   <section className='flex justify-between gap-2'>
                       <p className='text-lg font-bold'>{card.label}</p>
-                      <card.icon className="h-5 w-5 "/>
+                      <card.icon className="h-5 w-5 text-yellow-400"/>
 
                   </section>
 

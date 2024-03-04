@@ -35,7 +35,7 @@ export default function DataTable({
     <div>
 
     <div className="rounded-md border">
-      <Table key="table" className="rounded-md border text-white bg-yellow-500">
+      <Table key="table" className="rounded-md border text-white bg-black">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
@@ -60,7 +60,7 @@ export default function DataTable({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className="hover:bg-black hover:text-white hover:font-bold"
+                className="hover:bg-slate-800 hover:text-white hover:font-bold"
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id} >
@@ -82,8 +82,6 @@ export default function DataTable({
     
     <div className="flex items-center justify-end space-x-2 py-4">
       <Button
-      variant="mine"
-     
       size="sm"
       onClick={() => table.previousPage()}
       disabled={!table.getCanPreviousPage()}
@@ -91,7 +89,7 @@ export default function DataTable({
 
       Previous</Button>
       <Button
-      variant="mine"
+   
        
       size="sm"
       onClick={() => table.nextPage()}
