@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row items-center gap-4 mt-16">
           <div className="flex-1  flex flex-col  justify-start p-5">
             
-        <p className="text-justify  text-xl font-bold"><span className="text-3xl text-yellow-400 font-bold">" With SHINE </span> Unleash the power of our bespoke social media magic to propel your brand to the forefront of the digital world. Elevate your online presence, captivate audiences, and ignite conversations that drive unprecedented growth.<span className="text-3xl text-yellow-400 font-bold">"</span> </p> 
+        <p className="text-justify  text-xl font-bold"><span className="text-3xl text-yellow-400 font-bold">&quot; With SHINE </span> Unleash the power of our bespoke social media magic to propel your brand to the forefront of the digital world. Elevate your online presence, captivate audiences, and ignite conversations that drive unprecedented growth.<span className="text-3xl text-yellow-400 font-bold">&quot;</span> </p> 
          <p className="mt-5 text-lg font-semibold mb-4"> New User Sign Up Now and Reach Millions </p>
           <Link href="/sign-in" className="rounded-lg text-center bg-black text-white py-3 px-5 w-1/3">Sign In</Link>
           </div>
